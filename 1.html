@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A110250078_期末作品</title>
+  <style>
+    body,
+    html {margin: 0;padding: 0;background-color: #6ba6d6;width: 100%;height: 100%;overflow: hidden;}
+    header {width: 100%;height: 20%;top: 0;left: 0;display: flex;align-items: center;justify-content: center;
+      color: aliceblue;font-size: 25px;background-image: url("images/holointro.jpg");background-size: cover;
+      background-color: rgba(0, 0, 0, 0.4);background-blend-mode: multiply;}
+    header h1 {animation: fadin 3s ease-in;}
+
+    /* nav動畫 */
+    @keyframes fadin {from {opacity: 0;}to {opacity: 1;}}
+    /* nav */
+    nav {width: 100%;height: 15%;background: linear-gradient(135deg, #5ee7df, #b490ca);display: flex;
+      box-sizing: border-box;font-weight: bold;}
+    .section1 {height: 65%;width: 100%;position: relative; display: flex;}
+    aside {width: 40%;height: 100%;position: relative;border: 15px solid;box-sizing: border-box;
+      border-radius: 100px;background-size: cover;overflow: hidden;margin: 2px;}
+
+    aside img {position: absolute;display: block;opacity: 0;width: 100%;height: 100%;object-fit: cover;
+      animation: fade 25s linear infinite;}
+
+    @keyframes fade {
+      4% {opacity: 1;}
+      20% {opacity: 1;}
+      24% {opacity: 0;}}
+    aside>img:nth-child(5) {animation-delay: 20s;}
+    aside>img:nth-child(4) {animation-delay: 15s;}
+    aside>img:nth-child(3) {animation-delay: 10s;}
+    aside>img:nth-child(2) {animation-delay: 5s;}
+    aside>img:nth-child(1) {animation-delay: 0s;}
+
+    nav ul{list-style: none;display: flex; margin: 0; padding: 0;
+       align-items: center; justify-content: center; height: 100%;}
+    nav>ul,nav>ul>li{margin: 5px;}
+    nav ul>li{width: 100px;height: 50px;}
+    nav ul >li div{width: 100px; height: 50px; align-items: center;display: flex; justify-content: center;
+      clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);background: linear-gradient(to right, #ff9966, #ff5e62);}
+    nav ul ul li{display:flex;justify-content: center; align-items: center; border: 1px solid;}
+    .nav2{display: none;width: 100%;height: 100%;position: relative;z-index: 999;}
+    .nav2 li{background-color: rgba(240, 248, 255, 0.825);}
+    .nav3{display: none; position: absolute; left: 100%; }
+    nav ul>li:hover .nav2{display: block;}
+    .nav2 li:hover ul{display: block;}
+    nav>ul>li:nth-child(3) .nav3{right: 100%;left: auto;}
+
+    .intruation_table {left: 40%;width: 90%;text-align: center;margin: auto;border-width: 2px ;margin: 20px;
+    border-style: inset;border-collapse: collapse;}
+    .intruation_table td,th{border-bottom: 2px solid #acacac; padding:20px}
+    .introtb{ width: calc(100%-20px);margin-top: 20px; box-sizing: border-box;}
+    .introtb caption{font-size: 40px;}
+    .se1_2{width: 100%; overflow-y: auto;}
+
+    .div_img{width: 100%;margin: 20px; width: 90%;}
+    .div_img table{font-size: 20px ;font-weight: bold; height: auto; border: 2px solid; border-collapse: collapse;}
+    .div_img th{width: auto;height: auto; border: 2px solid;}
+    .div_img caption{overflow: hidden;}
+    .div_img caption>p{font-size: 40px; animation: mv_caption 8s linear infinite alternate; }
+    .div_img video,.div_img audio{max-width: 400px; max-height: 400px;} 
+    @keyframes mv_caption{
+      from {transform: translateX(15%);}
+      to{transform: translateX(-15%);}
+    }
+  </style>
+</head>
+  <header>
+    <h1>Hololive</h1>
+  </header>
+  <nav>
+    <ul>
+      <li> 
+        <div>日文組</div>
+          <ul class="nav2">
+            <li>零期生
+            <ul class="nav3">
+              <li>ときのそら</li>
+              <li>ロボ子さん</li>
+              <li>AZKI</li>
+              <li>さくらみこ</li>
+              <li>星街すせい</li>
+            </ul></li>
+            <li>一期生
+            <ul class="nav3">
+              <li>夜空メル</li>
+              <li>アキ.ローゼッタール</li>
+              <li>赤井はあと</li>
+              <li>白上フブキ</li>
+              <li>夏色まつり</li>
+            </li>
+            </ul>
+            <li>二期生
+              <ul class="nav3">
+                <li>湊あくあ</li>
+                <li>紫咲シオ</li>
+                <li>百鬼あやめ</li>
+                <li>癒月ちょこ</li>
+                <li>大空スバル</li>
+
+              </ul>
+            </li>
+            <li>三期生
+              <ul class="nav3">
+                <li>兎田ぺこら</li>
+                <li>不知火フレア</li>
+                <li>白銀ノエル</li>
+                <li>宝鐘マリン</li>
+
+              </ul>
+            </li>
+            <li>四期生
+              <ul class="nav3">
+                <li>天音かなた</li>
+                <li>角巻わため</li>
+                <li>常闇トワ</li>
+                <li>姫森ルーナ</li>
+              </ul>
+            </li>
+            <li>五期生
+              <ul class="nav3">
+                <li>雪花ラミィ</li>
+                <li>桃鈴ねね</li>
+                <li>獅白ぼたん</li>
+                <li>尾丸ポルカ</li>
+
+              </ul>
+            </li>
+            <li>六期生
+              <ul class="nav3">
+                <li>ラプラス・ダークネス</li>
+                <li>鷹嶺ルイ</li>
+                <li>博衣こより</li>
+                <li>沙花叉クロヱ</li>
+                <li>風真いろは</li>
+              </ul>
+            </li>
+          </ul>
+      </li>
+      <li>
+        <div>英文組</div>
+        <ul class="nav2">
+          <li>一期生
+            <ul class="nav3">
+              <li>Mori Calliope</li>
+              <li>Takanashi Kiara</li>
+              <li>Ninomae Ina'nis</li>
+              <li>Gawr Gura</li>
+              <li>Watson Amelia</li>
+            </ul>
+          </li>
+          <li>二期生
+            <ul class="nav3">
+              <li>IRYS</li>
+              <li>Ceres Fauna</li>
+              <li>Ouro Kronii</li>
+              <li>Nanashi Mumei</li>
+              <li>Hakos Baelz</li>
+            </ul>
+          </li>
+          <li>三期生
+            <ul class="nav3">
+              <li>Shiori Novella</li>
+              <li>Koseki Bijou</li>
+              <li>Nerissa Ravencroft</li>
+              <li>Fuwawa Abyssgard</li>
+              <li>Mococo Abyssgard</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <div>印尼組</div>
+        <ul class="nav2">
+          <li>一期生
+            <ul class="nav3">
+              <li>Ayunda Risu</li>
+              <li>Moona Hoshinova</li>
+              <li>Airani Iofifteen</li>
+            </ul>
+          </li>
+          <li>二期生
+            <ul class="nav3">
+              <li>Kureiji Ollie</li>
+              <li>Anya Melfissa</li>
+              <li>Pavolia Reine</li>
+            </ul>
+          </li>
+
+          <li>三期生
+            <ul class="nav3">
+              <li>Vestia Zeta</li>
+              <li>Kaela Kovalskia</li>
+              <li>Kobo Kanaeru</li>
+            </ul>
+          </li>
+        </ul>
+
+      </li>
+    </ul>
+
+  </nav>
+
+  <section class="section1">
+    <aside>
+      <img src="images/holointro.jpg" alt="">
+      <img src="images/61.png" alt="">
+      <img src="images/fubuki.png" alt="">
+      <img src="images/miko.png" alt="">
+      <img src="images/susei.png" alt="">
+    </aside>
+    <div class="se1_2">
+      <div class="introtb">
+        <table class="intruation_table">
+          <caption>Hololive intruduction</caption>
+          <tbody><tr>
+            <th>原文名稱</th>
+              <td>カバー株式会社</td>
+            </tr>
+            <tr>
+              <th>成立時間</th>
+              <td>2016年6月13日</td>
+            </tr>
+            <tr>
+              <th>代表人物</th>
+              <td>董事兼CEO:谷鄉元昭</td>
+            </tr>
+            <tr>
+              <th>產業</th>
+              <td>虛擬實境<br>虛擬Youtuber經紀公司</td>
+            </tr>
+            <tr>
+              <th>主要部門</th>
+              <td>hololive <br>
+                hololive DEV_IS <br> holostarts <br>hololive indonesia <br>
+                hololive English <br>holostarts English <br></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="div_img">
+        <table>
+          <caption><p>づ｡◕‿‿◕｡)づ 影音專區ヽ(´▽｀)ノ</p></caption>
+          <th><video src="videos/fuvuki.mp4" controls></video><audio src="musics/【Hololive歌曲翻譯中日字幕】KINGWORLD-白上フブキ.mp3" controls></audio></th>
+          <th><video src="videos/koyori.mp4" controls></video><audio src="musics/NEXT COLOR PLANET_susei.mp3" controls></audio>
+          </th>
+
+        </table>
+
+      </div>
+    </div>
+
+  </section>
+  
+
+</body>
+
+</html>
