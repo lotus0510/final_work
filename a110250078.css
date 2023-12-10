@@ -1,0 +1,72 @@
+
+    body,
+    html {margin: 0;padding: 0;background-color: #6ba6d6;width: 100%;height: 100%;overflow: hidden;}
+    header {width: 100%;height: 20%;top: 0;left: 0;display: flex;align-items: center;justify-content: center;
+      color: aliceblue;font-size: 25px;background-image: url("images/holointro.jpg");background-size: cover;
+      background-color: rgba(0, 0, 0, 0.4);background-blend-mode: multiply;}
+    header h1 {animation: fadin 3s ease-in;}
+
+    /* nav動畫 */
+    @keyframes fadin {from {opacity: 0;}to {opacity: 1;}}
+    /* nav */
+    nav {width: 100%;height: 15%;background: linear-gradient(135deg, #5ee7df, #b490ca);display: flex;
+      box-sizing: border-box;font-weight: bold;}
+    .section1 {height: 55%;width: 100%;position: relative; display: flex;}
+    .section2{width: 100%; display: flex; border: 3px solid rgb(185, 255, 246); }
+    aside {width: 40%;height: 100%;position: relative;border: 15px solid;box-sizing: border-box;
+      border-radius: 100px;background-size: cover;overflow: hidden;margin: 2px;}
+
+    aside img {position: absolute;display: block;opacity: 0;width: 100%;height: 100%;object-fit: cover;
+      animation: fade 25s linear infinite;}
+
+    @keyframes fade {
+      4% {opacity: 1;}
+      20% {opacity: 1;}
+      24% {opacity: 0;}}
+    aside>img:nth-child(5) {animation-delay: 20s;}
+    aside>img:nth-child(4) {animation-delay: 15s;}
+    aside>img:nth-child(3) {animation-delay: 10s;}
+    aside>img:nth-child(2) {animation-delay: 5s;}
+    aside>img:nth-child(1) {animation-delay: 0s;}
+
+    nav ul{list-style: none;display: flex; margin: 0; padding: 0;
+       align-items: center; justify-content: center; height: 100%;}
+    nav>ul,nav>ul>li{margin: 5px;}
+    nav ul>li{width: 100px;height: 50px;}
+    nav ul >li div{width: 100px; height: 50px; align-items: center;display: flex; justify-content: center;
+      clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);background: linear-gradient(to right, #ff9966, #ff5e62);}
+    nav ul ul li{display:flex;justify-content: center; align-items: center; border: 1px solid;}
+    .nav2{display: none;width: 100%;height: 100%;position: relative;z-index: 999;}
+    .nav2 li{background-color: rgba(240, 248, 255, 0.825);}
+    .nav3{display: none; position: absolute; left: 100%; }
+    nav ul>li:hover .nav2{display: block;}
+    .nav2 li:hover ul{display: block;}
+    nav>ul>li:nth-child(3) .nav3{right: 100%;left: auto;}
+
+    .intruation_table {left: 40%;width: 90%;text-align: center;margin: auto;border-width: 2px ;margin: 20px;
+    border-style: inset;border-collapse: collapse;}
+    .intruation_table td,th{border-bottom: 2px solid #acacac; padding:20px}
+    .introtb{ width: calc(100%-20px);margin-top: 20px; box-sizing: border-box;}
+    .introtb caption{font-size: 40px;}
+    .se1_2{width: 100%; overflow-y: auto;}
+
+    .div_img{width: 100%;margin: 20px; width: 90%;}
+    .div_img table{font-size: 20px ;font-weight: bold; height: auto; border: 2px solid; border-collapse: collapse;}
+    .div_img th{width: auto;height: auto; border: 2px solid;}
+    .div_img caption{overflow: hidden;}
+    .div_img caption>p{font-size: 40px; animation: mv_caption 8s linear infinite alternate; }
+    .div_img video,.div_img audio{max-width: 400px; max-height: 400px;} 
+    @keyframes mv_caption{
+      from {transform: translateX(15%);}
+      to{transform: translateX(-15%);}
+    }
+    footer{background: linear-gradient(135deg, #b490ca, #5ee7df); width: 100%; height: 10%; display: flex;
+    align-items: center; justify-content: center;margin: 0;}
+    footer img {max-width: 60px; height: auto; padding-right: 10px;}
+    .footer_ani{animation: footer_ani 5s linear infinite alternate;}
+    .footer_ani:hover {animation-play-state:paused ;}
+    .footer_ani img:hover{transform: scale(5) translateY(-10px); }
+@keyframes footer_ani{
+from{transform: translateX(50%);}
+to{transform: translateX(-50%);}
+}
